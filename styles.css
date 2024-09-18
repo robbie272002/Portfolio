@@ -1,0 +1,676 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+:root {
+  --primary-color: #a855f7;
+  --primary-color-dark: #9333ea;
+  --secondary-color: #00abf0;
+  --text-dark: #ededed; /* Updated */
+  --text-light: #ededed; /* Updated */
+  --extra-light: #000000; /* Updated */
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000000; /* Updated */
+  color: var(--text-dark); /* Ensure text uses the updated color */
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000; /* Updated */
+  z-index: 99;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00abf0; /* Updated for logo */
+  transition: 0.3s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+
+nav .checkbox i {
+  font-size: 2rem;
+  color: #ffffff; /* Updated toggle color */
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a{
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark); /* Updated */
+  transition: 0.3s;
+}
+
+ul li a:hover,
+ul li a:active {
+  color: var(--secondary-color);
+}
+
+ul li a.active {
+  color: var(--secondary-color);
+  font-weight: 700; /* Make it bold if you want */
+}
+
+.section {
+  background-color: var(--extra-light);
+}
+
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark); /* Updated */
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+h1 {
+  color: #00abf0; /* Updated for h1 elements */
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light); /* Updated */
+  margin-bottom: 2rem;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid #00abf0; /* Updated */
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.action__btns button:hover {
+  background-color: #ffffff; /* Change background to white on hover */
+  border: 2px solid #00abf0; /* Border color on hover */
+  color: #00abf0; /* Text color on hover */
+}
+
+.hire__me {
+  background-color: var(--secondary-color);
+  color: #000000;
+}
+
+.hire__me:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.letstalk {
+  color:#00abf0;
+  background-color: #000000;
+}
+
+.letstalk:hover {
+  background-color: var(--primary-color-dark);
+  color: #ffffff;
+}
+
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.image {
+  display: grid;
+  place-items: center;
+}
+
+.image img {
+  width: min(25rem, 90%);
+  border-radius: 100%;
+}
+
+
+/* About Section */
+.about {
+  padding: 100px 5%;
+  background-color: #0D1319;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row; /* Align image and text horizontally on larger screens */
+  align-items: center; /* Center content vertically */
+  gap: 20px; /* Space between image and text */
+}
+
+.about-image {
+  flex: 1; /* Takes up one part of the flex container */
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners */
+}
+
+.about-text {
+  flex: 1; /* Takes up one part of the flex container */
+  text-align: left;
+}
+
+.about h2 {
+  font-size: 2rem; /* Adjusted for better readability */
+  margin-bottom: 20px;
+  color: #00abf0;
+}
+
+.about p {
+  font-size: 1rem; /* Adjusted font size */
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Space between text and button */
+}
+
+.btn-more {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem; /* Consistent font size */
+  color: #0D1319; /* Button text color */
+  background-color: #00abf0; /* Button background color */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  margin: 20px auto; /* Center the button horizontally and add margin for spacing */
+}
+
+.btn-more:hover {
+  background-color: #0090d9; /* Darker shade on hover */
+  color: #ffffff; /* Text color on hover */
+}
+/* Services Section */
+.services {
+  padding: 80px 10%;
+  background: #000000;
+  text-align: center;
+  color: #ffffff;
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #00abf0;
+}
+
+.service-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.service {
+  height: 420px;
+  width: 350px;
+  background: #0D1319;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  transition: .3s;
+}
+
+.service i {
+  font-size: 36px;
+  color: #0090d9;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.service h3 {
+  height: 65px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service p {
+  margin-top: 5px;
+  height: 190px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.btn-read-more {
+  margin-top: 2px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #00abf0;
+  background-color: #0D1319;
+  border: 1px solid #00abf0;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-read-more:hover {
+  background-color: #00abf0;
+  color: #0D1319;
+  margin-top: 15px;
+}
+
+/* Portfolio Section */
+.portfolio {
+  padding: 100px 10%; /* Default padding for large screens */
+  background-color: #0D1319;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ededed;
+}
+
+.portfolio-gallery {
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.portfolio-gallery img {
+  border-radius: 8px;
+  width: 360px; 
+  height: 300px;
+  object-fit: cover; 
+  border: 4px solid #D1E3F8; 
+  transition: transform 0.3s ease;
+}
+.portfolio-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 10%;
+  background-color: #000000; 
+  color: #ffffff; 
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  gap: 30px;
+}
+
+.contact-info {
+  flex: 1; 
+  max-width: 50%; /* Limit width to prevent overflow */
+}
+
+.contact-info h2.section__title {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #00abf0; 
+}
+
+.contact-info h2.section__title span {
+  font-weight: bold; /* Bold for emphasis */
+}
+
+.contact-info p.section__subtitle {
+  font-size: 18px;
+  color: #ffffff; /* Subtitle color */
+  margin-bottom: 30px; /* Space between subtitle and details */
+}
+
+.contact-text {
+  margin-top: 20px; /* Adds space before each paragraph */
+}
+
+.contact-text:first-of-type {
+  margin-top: 0; /* No space before the first paragraph */
+}
+
+.social__icons {
+  display: flex;
+  justify-content: left; /* Center the icons horizontally */
+  gap: 20px; /* Space between icons */
+  margin: 20px 0; /* Space above and below the icons */
+}
+
+.social__icons a {
+  color: #00abf0; /* Icon color */
+  font-size: 24px; /* Icon size */
+  transition: color 0.3s ease;
+}
+
+.social__icons a:hover {
+  color: #0090d9; /* Icon color on hover */
+}
+
+/* Contact Form Styling */
+.contact-form {
+  margin-top: 80px;
+  flex: 1; /* Take up remaining space */
+  max-width: 50%; /* Limit width to prevent overflow */
+  text-align: left; /* Align text to the left */
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column; /* Stack inputs and button vertically */
+  gap: 15px; /* Space between form elements */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #1a1a1a; /* Input background color */
+  color: #ffffff; /* Input text color */
+  text-align: left; /* Align text inside inputs to the left */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.contact-form textarea {
+  resize: none; /* Disable resizing */
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #00abf0;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Center text inside the button */
+}
+
+.contact-form button:hover {
+  background-color: #0091d3; /* Button color on hover */
+}
+
+@media (max-width: 750px) {
+  nav .checkbox {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+
+  ul li a {
+    font-size: 1.25rem;
+  }
+
+  .section__container {
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .action__btns {
+    margin: auto;
+  }
+  
+  .home-sci {
+    position: relative; /* Keep it in the normal document flow */
+    bottom: auto; /* Reset bottom positioning */
+    right: auto; /* Reset right positioning */
+    margin-top: 1rem; /* Adjusted margin-top to move it up closer to the buttons */
+    width: 100%; /* Full width for better alignment */
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 1rem; /* Space between icons */
+  }
+
+  .home-sci a {
+    width: 35px; /* Adjust size of icons */
+    height: 35px; /* Adjust size of icons */
+    font-size: 18px; /* Adjust icon font size */
+  }
+
+  .action__btns {
+    margin-bottom: 2rem; /* Adjusted margin-bottom to create space above the icons */
+  }
+  .about-content {
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    gap: 20px; /* Space between image and text */
+  }
+
+  .about-image {
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    width: 100%; /* Ensure image container takes full width */
+  }
+
+  .about-image img {
+    max-width: 90%; /* Fit image within its container */
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column; /* Stack text and button vertically */
+    align-items: center; /* Center text and button horizontally */
+    width: 100%; /* Ensure text container takes full width */
+  }
+
+  .about h2 {
+    font-size: 1.5rem; /* Adjusted font size for mobile */
+  }
+
+  .about p {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    margin-bottom: 1rem; /* Space between text and button */
+    text-align: center;
+  }
+
+  .btn-more {
+    display: inline-block; /* Ensure button does not stretch */
+    padding: 4px 10px; /* Adjust padding */
+    font-size: 1rem; /* Adjust font size */
+    background-color: #00abf0; /* Button background color */
+    color: #0D1319; /* Button text color */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    margin: 10px 0; /* Center the button horizontally and add margin for spacing */
+  }
+  
+  .btn-more:hover {
+    background-color: #0090d9; /* Darker shade on hover */
+    color: #ffffff; /* Text color on hover */
+  }
+  .services {
+    padding: 40px 5%; /* Adjusted padding for smaller screens */
+  }
+
+  .services h2 {
+    font-size: 28px; /* Adjusted font size for better readability */
+  }
+
+  .service-box {
+    flex-direction: column; /* Stack service boxes vertically */
+    align-items: center; /* Center align service boxes */
+  }
+
+  .service {
+    width: 90%; /* Adjust width to fit within mobile screen */
+    height: auto; /* Adjust height to fit content */
+    margin: 10px 0; /* Space between stacked service boxes */
+  }
+
+  .service i {
+    font-size: 30px; /* Adjusted icon size for smaller screens */
+  }
+
+  .service h3 {
+    font-size: 20px; /* Adjusted font size */
+  }
+
+  .service p {
+    font-size: 16px; /* Adjusted font size for better readability */
+    height: auto; /* Adjust height to fit content */
+  }
+
+  .btn-read-more {
+    padding: 8px 16px; /* Adjusted padding for a smaller button */
+    font-size: 14px; /* Adjusted font size */
+  }
+
+  .contact-content {
+    flex-direction: column; /* Stack contact info and form vertically on mobile */
+    align-items: flex-start;
+    width:100%;
+  }
+  
+  .contact-info,
+  .contact-form {
+    max-width: 100%; /* Full width on mobile */
+    margin-bottom: 20px; /* Add space below each section */
+    
+  }
+
+  .contact-info h2.section__title {
+    font-size: 20px; /* Reduced font size for mobile */
+  }
+
+  .contact-info p.section__subtitle {
+    font-size: 16px; /* Smaller subtitle font size */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px; /* Font size for mobile screens */
+
+  }
+
+  .contact-form button {
+    font-size: 14px; /* Font size for mobile screens */
+  }
+
+  .contact-form form{
+    width: 350px;
+    max-width: 800px;
+  }
+}
